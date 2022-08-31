@@ -1,0 +1,47 @@
+.card {
+	width: 200px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-bottom: 20px;
+	box-shadow: 4px 14px 10px 0px rgba(0, 0, 0, 0.2);
+	padding: 5px;
+	border-radius: 10px;
+	> img {
+		height: 100px;
+		width: 100px;
+	}
+
+	> div {
+		margin-top: 20px;
+		display: flex;
+		gap: 20px;
+		> span {
+			color: green;
+			display: block;
+			overflow: hidden;
+			white-space: nowrap;
+			&:first-child {
+				width: 80px;
+				text-overflow: ellipsis;
+			}
+		}
+	}
+
+	> button {
+		cursor: pointer;
+		margin-top: 20px;
+		outline: none;
+		border: none;
+		padding: 10px;
+		border-radius: 15px;
+		background-color: green;
+		color: #ffff;
+		font-weight: 600;
+		transition: background-color 0.3s ease;
+
+		&:hover {
+			background-color: rgb(4, 90, 4);
+		}
+	}
+}

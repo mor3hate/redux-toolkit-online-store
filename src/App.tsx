@@ -1,26 +1,21 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Layout from './components/layout/Layout'
+import { useGetAllProductsQuery } from './store/product/product-api'
+import ProductItem from './components/product/ProductItem'
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	const { data, isLoading, error } = useGetAllProductsQuery(6)
+
+	return (
+		<div className='App'>
+			<Layout>
+				<div className='card_container'>
+					{data?.map(item => (
+						<ProductItem product={item} key={item.id} />
+					))}
+				</div>
+			</Layout>
+		</div>
+	)
 }
 
-export default App;
+export default App

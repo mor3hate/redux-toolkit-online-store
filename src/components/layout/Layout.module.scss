@@ -1,0 +1,44 @@
+.layout {
+	max-width: 450px;
+	margin: 0 auto;
+
+	> header {
+		display: flex;
+		position: relative;
+		justify-content: space-between;
+		align-items: center;
+		padding: 10px 0;
+
+		> a {
+			color: green;
+			text-decoration: none;
+			font-size: 30px;
+			font-weight: 600;
+			transition: color 0.3s ease;
+
+			&:hover {
+				color: rgb(4, 90, 4);
+			}
+		}
+
+		> button {
+			cursor: pointer;
+			outline: none;
+			border: none;
+			background-color: green;
+			width: 40px;
+			height: 40px;
+			border-radius: 50%;
+			overflow: hidden;
+			transition: background-color 0.3s ease;
+
+			&:hover {
+				background-color: rgb(4, 90, 4);
+			}
+
+			> svg {
+				color: #ffff;
+			}
+		}
+	}
+}
