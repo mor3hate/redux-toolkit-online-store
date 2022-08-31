@@ -17,9 +17,13 @@ code {
 }
 
 .card_container {
+	margin-top: 20px;
 	display: flex;
 	justify-content: space-between;
 	flex-wrap: wrap;
+	@media (max-width: (479.98px)) {
+		justify-content: center;
+	}
 }
 
 .checkout-text {

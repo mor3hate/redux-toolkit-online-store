@@ -15,7 +15,7 @@ const Header: FC = () => {
 		<header ref={ref}>
 			<Link to='/'>E-commerce</Link>
 			<button onClick={cartShowHandler} style={{ zIndex: '2' }}>
-				<AiOutlineShopping size='1.5rem' />
+				<AiOutlineShopping size='1.5rem' style={{ textAlign: 'center' }} />
 			</button>
 			{isShow ? <Cart /> : null}
 		</header>
